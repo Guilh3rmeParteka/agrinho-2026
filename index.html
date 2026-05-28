@@ -1,75 +1,507 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AgroForte Futuro Sustentável</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AgroForte Futuro Sustentável</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#081c10;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* FUNDO */
+
+.bg-animation{
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    z-index:-2;
+    background:
+    radial-gradient(circle at top left,#145a25 0%, transparent 35%),
+    radial-gradient(circle at bottom right,#2ecc71 0%, transparent 30%),
+    #081c10;
+}
+
+/* PARTÍCULAS */
+
+.bg-animation::before{
+    content:'';
+    position:absolute;
+    width:200%;
+    height:200%;
+    background-image:
+    radial-gradient(rgba(255,255,255,0.15) 1px, transparent 1px);
+
+    background-size:40px 40px;
+
+    animation:particles 25s linear infinite;
+}
+
+/* HEADER */
+
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(12px);
+    z-index:1000;
+    border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.logo{
+    font-size:32px;
+    font-weight:700;
+    color:#6eff7b;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:30px;
+    font-weight:500;
+    position:relative;
+    transition:0.3s;
+}
+
+nav a::after{
+    content:'';
+    width:0%;
+    height:3px;
+    background:#6eff7b;
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    flex-direction:column;
+    padding:120px 8%;
+    position:relative;
+}
+
+.hero h1{
+    font-size:80px;
+    max-width:900px;
+    line-height:1.1;
+
+    background:linear-gradient(to right,#ffffff,#6eff7b);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    animation:fadeUp 1s ease;
+}
+
+.hero p{
+    max-width:800px;
+    margin-top:25px;
+    font-size:22px;
+    color:#d8d8d8;
+    line-height:1.7;
+
+    animation:fadeUp 1.5s ease;
+}
+
+.hero-buttons{
+    margin-top:40px;
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.btn{
+    padding:16px 35px;
+    border-radius:50px;
+    border:none;
+    font-size:17px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.4s;
+    text-decoration:none;
+}
+
+.btn-primary{
+    background:linear-gradient(45deg,#2ecc71,#1f9d55);
+    color:white;
+    box-shadow:0 0 25px rgba(46,204,113,0.5);
+}
+
+.btn-primary:hover{
+    transform:translateY(-5px) scale(1.05);
+    box-shadow:0 0 35px rgba(46,204,113,0.8);
+}
+
+.btn-secondary{
+    border:2px solid rgba(255,255,255,0.2);
+    color:white;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(10px);
+}
+
+.btn-secondary:hover{
+    background:rgba(255,255,255,0.12);
+    transform:translateY(-5px);
+}
+
+/* SOBRE */
+
+.section{
+    padding:120px 8%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:50px;
+    margin-bottom:60px;
+    color:#6eff7b;
+}
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.about-text{
+    font-size:18px;
+    line-height:2;
+    color:#d6d6d6;
+}
+
+.about-image{
+    position:relative;
+}
+
+.about-image img{
+    width:100%;
+    border-radius:30px;
+    box-shadow:0 0 40px rgba(0,0,0,0.4);
+    animation:float 4s ease-in-out infinite;
+}
+
+/* CARDS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:35px;
+}
+
+.card{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.08);
+    backdrop-filter:blur(15px);
+
+    padding:40px;
+    border-radius:30px;
+
+    transition:0.5s;
+    position:relative;
+    overflow:hidden;
+}
+
+.card::before{
+    content:'';
+    position:absolute;
+    width:120%;
+    height:120%;
+    background:linear-gradient(
+    45deg,
+    transparent,
+    rgba(110,255,123,0.15),
+    transparent
+    );
+
+    top:-100%;
+    left:-100%;
+
+    transition:0.7s;
+}
+
+.card:hover::before{
+    top:100%;
+    left:100%;
+}
+
+.card:hover{
+    transform:translateY(-15px);
+    border-color:#6eff7b;
+    box-shadow:0 0 30px rgba(110,255,123,0.2);
+}
+
+.card span{
+    font-size:50px;
+}
+
+.card h3{
+    margin-top:20px;
+    margin-bottom:20px;
+    font-size:28px;
+    color:#6eff7b;
+}
+
+.card p{
+    color:#d6d6d6;
+    line-height:1.8;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:40px;
+    background:rgba(255,255,255,0.04);
+    color:#d6d6d6;
+    border-top:1px solid rgba(255,255,255,0.08);
+}
+
+/* ANIMAÇÕES */
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+@keyframes particles{
+
+    from{
+        transform:translate(-10%,-10%);
+    }
+
+    to{
+        transform:translate(-30%,-30%);
+    }
+
+}
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-20px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+
+}
+
+/* RESPONSIVO */
+
+@media(max-width:900px){
+
+    .hero h1{
+        font-size:50px;
+    }
+
+    .hero p{
+        font-size:18px;
+    }
+
+    .about{
+        grid-template-columns:1fr;
+    }
+
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+}
+
+</style>
 </head>
+
 <body>
 
-  <header>
-    <h1>AgroForte Futuro Sustentável</h1>
+<div class="bg-animation"></div>
+
+<header>
+
+    <div class="logo">🌱 AgroForte</div>
+
     <nav>
-      <a href="#sobre">Sobre</a>
-      <a href="#projetos">Projetos</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#projetos">Projetos</a>
     </nav>
-  </header>
 
-  <section class="hero">
-    <h2>Inovação Verde no Campo</h2>
-    <p>Tecnologia, sustentabilidade e produtividade agrícola.</p>
-        <button onclick="saibaMais()"><a href="https://agropecfuturo.com.br/agro-forte-futuro-sustentavel-equilibrio/" target="_blank">
-    Saiba Mais</button>
-        </a>
-         </section>
+</header>
 
-  <section id="sobre" class="content">
-    <h2>Sobre o AgroForte </h2>
+<section class="hero">
+
+    <h1>
+        O Futuro da Agricultura é Inteligente e Sustentável
+    </h1>
+
     <p>
-      O AgroForte Futuro Sustentável nasceu com a missão de transformar o campo por meio da inovação, da tecnologia e da preservação ambiental. Nosso objetivo é unir produtividade agrícola e sustentabilidade, criando soluções inteligentes que respeitam a natureza e fortalecem o desenvolvimento rural.
-
-Acreditamos que o futuro da agricultura depende do equilíbrio entre produção e responsabilidade ambiental. Por isso, investimos em práticas sustentáveis como energia solar rural, irrigação inteligente, reaproveitamento de água, preservação do solo e uso consciente dos recursos naturais.
-
-O AgroForte também incentiva o uso de tecnologias modernas no campo, incluindo sensores agrícolas, drones, automação e monitoramento digital das plantações. Essas ferramentas ajudam produtores a aumentar a produtividade, reduzir desperdícios e melhorar a qualidade dos alimentos produzidos.
-
-Além da inovação tecnológica, nosso projeto valoriza as pessoas do campo, promovendo conhecimento, capacitação e oportunidades para pequenos e grandes produtores. Queremos construir um futuro mais verde, eficiente e sustentável para as próximas gerações.
-
-O compromisso do AgroForte Futuro Sustentável é mostrar que é possível produzir mais, preservar o meio ambiente e gerar desenvolvimento econômico ao mesmo tempo. Juntos, podemos criar uma agricultura.
+        Unindo tecnologia, inovação e preservação ambiental para transformar
+        o agronegócio em um modelo moderno, eficiente e sustentável.
     </p>
-  </section>
 
-  <section id="projetos" class="content">
-    <h2>Projetos Sustentáveis</h2>
+    <div class="hero-buttons">
+
+        <a class="btn btn-primary"
+        href="https://agropecfuturo.com.br/agro-forte-futuro-sustentavel-equilibrio/"
+        target="_blank">
+
+        Saiba Mais
+
+        </a>
+
+        <a class="btn btn-secondary" href="#projetos">
+            Ver Projetos
+        </a>
+
+    </div>
+
+</section>
+
+<section id="sobre" class="section">
+
+    <h2 class="section-title">
+        Sobre o AgroForte
+    </h2>
+
+    <div class="about">
+
+        <div class="about-text">
+
+            O AgroForte Futuro Sustentável nasceu com a missão de revolucionar
+            o campo através da tecnologia e da preservação ambiental.
+
+            <br><br>
+
+            Nosso projeto promove energia solar rural, irrigação inteligente,
+            reaproveitamento de água, drones agrícolas, sensores digitais e
+            automação moderna.
+
+            <br><br>
+
+            Acreditamos em um futuro onde produtividade e sustentabilidade
+            caminham juntas para criar uma agricultura mais eficiente,
+            ecológica e inovadora.
+
+        </div>
+
+        <div class="about-image">
+
+            <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1974&auto=format&fit=crop">
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="projetos" class="section">
+
+    <h2 class="section-title">
+        Projetos Sustentáveis
+    </h2>
 
     <div class="cards">
 
-      <div class="card">
-        <h3>Energia Solar Rural</h3>
-        <p>A energia solar rural torna a agricultura mais sustentável e econômica, reduzindo custos com eletricidade e impactos ambientais. Com o uso de energia limpa, os produtores aumentam a eficiência das propriedades e contribuem para um futuro mais verde e sustentável no campo.</p>
-      </div>
+        <div class="card">
 
-      <div class="card">
-        <h3>Irrigação Inteligente</h3>
-        <p>A irrigação inteligente usa tecnologia para economizar água e aumentar a produtividade agrícola. Com sistemas automáticos e sensores, a irrigação acontece no momento certo, evitando desperdícios e promovendo uma agricultura mais sustentável.</p>
-      </div>
+            <span>☀</span>
 
-      <div class="card">
-        <h3>Plantio Sustentável</h3>
-        <p>O plantio sustentável utiliza técnicas que preservam o solo, reduzem o uso de químicos e aumentam a biodiversidade. Com práticas ecológicas, garante uma produção eficiente, saudável e sustentável para o meio ambiente.</p>
-      </div>
+            <h3>Energia Solar Rural</h3>
+
+            <p>
+                Produção de energia limpa para reduzir custos e tornar
+                propriedades rurais mais sustentáveis.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <span>💧</span>
+
+            <h3>Irrigação Inteligente</h3>
+
+            <p>
+                Sensores automáticos ajudam a economizar água e aumentar
+                a produtividade agrícola.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <span>🌿</span>
+
+            <h3>Plantio Sustentável</h3>
+
+            <p>
+                Técnicas ecológicas preservam o solo e garantem
+                alimentos mais saudáveis.
+            </p>
+
+        </div>
 
     </div>
-  </section>
 
-  
-  </section>
+</section>
 
-  <footer>
-    <p>© 2026 AgroForte Futuro Sustentável</p>
-  </footer>
+<footer>
 
-  <script src="script.js"></script>
+    © 2026 AgroForte Futuro Sustentável • Todos os direitos reservados
+
+</footer>
 
 </body>
 </html>
