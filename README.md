@@ -1,68 +1,176 @@
-🌱 AgroForte Futuro Sustentável
+# 🌱 AgroForte Futuro Sustentável
 
-📖 Sobre o Projeto
-
-O AgroForte Futuro Sustentável é um projeto desenvolvido com o objetivo de unir tecnologia, inovação e sustentabilidade no agronegócio. A plataforma apresenta soluções modernas para tornar a agricultura mais eficiente, econômica e sustentável.
-
-O projeto foi criado utilizando HTML e CSS, com foco em um design moderno, responsivo e com animações visuais que representam inovação no campo.
+Projeto web moderno desenvolvido para apresentar soluções tecnológicas e sustentáveis voltadas ao agronegócio, promovendo inovação, eficiência e preservação ambiental através da Agricultura 5.0.
 
 ---
 
-🚜 Objetivos
+ 📖 Sobre o Projeto
 
-* Incentivar práticas sustentáveis no campo
-* Demonstrar soluções ecológicas para a agricultura
-* Promover conscientização ambiental
-* Unir produtividade e preservação da natureza
+O **AgroForte Futuro Sustentável** é uma landing page interativa que demonstra como a tecnologia pode transformar o campo de forma sustentável.
 
----
+O projeto destaca iniciativas como:
 
- 🌿 Projetos Sustentáveis
+* ☀️ Energia Solar Rural
+* 💧 Irrigação Inteligente
+* 🌿 Plantio Sustentável
+* 🚁 Drones Agrícolas
 
- ☀ Energia Solar Rural
-
-Sistema de geração de energia limpa que reduz custos e impactos ambientais nas propriedades rurais.
-
- 💧 Irrigação Inteligente
-
-Tecnologia que utiliza sensores e automação para economizar água e melhorar a produtividade agrícola.
-
-🌱 Plantio Sustentável
-
-Práticas agrícolas que preservam o solo, reduzem desperdícios e incentivam uma produção mais saudável.
+Além disso, apresenta indicadores de impacto ambiental e recursos de acessibilidade para melhorar a experiência do usuário.
 
 ---
 
-💻 Tecnologias Utilizadas
+ ✨ Funcionalidades
+
+ 🎨 Interface Moderna
+
+* Design futurista inspirado na Agricultura 5.0
+* Efeitos visuais com gradientes e iluminação dinâmica
+* Layout responsivo para dispositivos móveis e desktops
+
+ ♿ Acessibilidade
+
+* Aumento de fonte
+* Redução de fonte
+* Modo alto contraste
+* Preferências salvas via Local Storage
+
+🎬 Animações
+
+* Reveal ao rolar a página
+* Contadores animados
+* Efeito parallax
+* Cartões com efeito 3D
+* Hover animations
+
+📱 Responsividade
+
+O site adapta automaticamente seu layout para:
+
+* Smartphones
+* Tablets
+* Notebooks
+* Monitores widescreen
+
+---
+
+🛠️ Tecnologias Utilizadas
+
+ Front-end
 
 * HTML5
 * CSS3
-* Animações CSS
+* JavaScript (Vanilla JS)
+
+Recursos Visuais
+
+* Google Fonts
+
+  * Poppins
+  * Orbitron
 * Glassmorphism
-* Gradientes e efeitos visuais modernos
+* Gradientes dinâmicos
+* Animações CSS
 
 ---
 
+## 📂 Estrutura do Projeto
 
- 📂 Estrutura do Projeto
-
-```bash
+```text
 AgroForte/
 │
 ├── index.html
 ├── style.css
-└── README.md
+├── main.js
+│
+└── assets/
+    ├── imagens/
+    └── icones/
 ```
 
 ---
 
- 🌎 Objetivo Sustentável
 
-O AgroForte busca mostrar que é possível produzir mais, utilizar tecnologia e preservar o meio ambiente ao mesmo tempo, criando um futuro melhor para a agricultura.
+
 
 ---
-👨‍💻 Desenvolvedor
 
-Projeto desenvolvido por Guilherme Parteka para fins de trabalho escolar (AGRINHO) e para alcançar nota em Matemática II.
+ Seções do Site
+
+🏠 Início
+
+Apresentação principal do projeto com chamada para ação.
+
+📖 Sobre
+
+Informações sobre o AgroForte e seus objetivos sustentáveis.
+
+🚀 Projetos
+
+Exibição das principais iniciativas tecnológicas e ambientais.
+
+ 📊 Impacto
+
+Indicadores de desempenho sustentável:
+
+* 95% Economia de Água
+* 80% Redução de Desperdícios
+* 100% Energia Renovável
+
+📞 Rodapé
+
+Informações institucionais e identidade visual do projeto.
+
+---
+
+ ⚙️ Recursos JavaScript
+
+O arquivo `main.js` implementa:
+
+Acessibilidade
+
+* Controle de tamanho da fonte
+* Alto contraste
+* Persistência com Local Storage
+
+ Interatividade
+
+* Menu com rolagem suave
+* Animações de entrada
+* Contadores dinâmicos
+
+Efeitos Visuais
+
+* Parallax do Hero
+* Efeito 3D nas imagens
+* Efeito 3D nos cards
+* Glow dinâmico seguindo o cursor
+
+---
+
+🌱 Objetivos Sustentáveis
+
+O projeto incentiva práticas alinhadas aos seguintes pilares:
+
+* Preservação ambiental
+* Uso eficiente da água
+* Energia limpa
+* Agricultura inteligente
+* Automação rural
+* Redução de desperdícios
+
+---
+
+
+---
+
+👨‍💻 Autor
+
+Projeto desenvolvido por Guilherme Parteka
+
+
+---
+📄
+
+Este projeto pode ser utilizado para fins acadêmicos e educacionais.
 
 © 2026 AgroForte Futuro Sustentável
