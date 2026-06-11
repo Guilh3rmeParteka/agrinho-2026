@@ -1,6 +1,6 @@
-# 🌱 AgroForte Futuro Sustentável
+🌱 AgroForte Futuro Sustentável
 
-## 📖 Sobre o Projeto
+📖 Sobre o Projeto
 
 O AgroForte Futuro Sustentável é um projeto desenvolvido com o objetivo de unir tecnologia, inovação e sustentabilidade no agronegócio. A plataforma apresenta soluções modernas para tornar a agricultura mais eficiente, econômica e sustentável.
 
@@ -8,7 +8,7 @@ O projeto foi criado utilizando HTML e CSS, com foco em um design moderno, respo
 
 ---
 
-## 🚜 Objetivos
+🚜 Objetivos
 
 * Incentivar práticas sustentáveis no campo
 * Demonstrar soluções ecológicas para a agricultura
@@ -17,23 +17,23 @@ O projeto foi criado utilizando HTML e CSS, com foco em um design moderno, respo
 
 ---
 
-## 🌿 Projetos Sustentáveis
+ 🌿 Projetos Sustentáveis
 
-### ☀ Energia Solar Rural
+ ☀ Energia Solar Rural
 
 Sistema de geração de energia limpa que reduz custos e impactos ambientais nas propriedades rurais.
 
-### 💧 Irrigação Inteligente
+ 💧 Irrigação Inteligente
 
 Tecnologia que utiliza sensores e automação para economizar água e melhorar a produtividade agrícola.
 
-### 🌱 Plantio Sustentável
+🌱 Plantio Sustentável
 
 Práticas agrícolas que preservam o solo, reduzem desperdícios e incentivam uma produção mais saudável.
 
 ---
 
-## 💻 Tecnologias Utilizadas
+💻 Tecnologias Utilizadas
 
 * HTML5
 * CSS3
@@ -44,7 +44,7 @@ Práticas agrícolas que preservam o solo, reduzem desperdícios e incentivam um
 ---
 
 
-## 📂 Estrutura do Projeto
+ 📂 Estrutura do Projeto
 
 ```bash
 AgroForte/
@@ -56,14 +56,12 @@ AgroForte/
 
 ---
 
-
-## 🌎 Objetivo Sustentável
+ 🌎 Objetivo Sustentável
 
 O AgroForte busca mostrar que é possível produzir mais, utilizar tecnologia e preservar o meio ambiente ao mesmo tempo, criando um futuro melhor para a agricultura.
 
 ---
-
-## 👨‍💻 Desenvolvedor
+👨‍💻 Desenvolvedor
 
 Projeto desenvolvido por Guilherme Parteka para fins de trabalho escolar (AGRINHO) e para alcançar nota em Matemática II.
 
