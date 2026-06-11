@@ -1,8 +1,7 @@
-# index.html
-
 ```html
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
 
 <meta charset="UTF-8">
@@ -13,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Orbitron:wght@500;700;800&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
 
@@ -25,72 +24,127 @@
 
 <header>
 
-    <div class="logo">🌱 AgroForte</div>
+    <div class="logo">
+        🌱 AgroForte
+    </div>
 
     <nav>
+        <a href="#inicio">Início</a>
         <a href="#sobre">Sobre</a>
         <a href="#projetos">Projetos</a>
+        <a href="#impacto">Impacto</a>
     </nav>
 
 </header>
 
-<section class="hero">
+<section id="inicio" class="hero">
 
-    <h1>
-        O Futuro da Agricultura é Inteligente e Sustentável
+    <div class="hero-glow"></div>
+
+    <span class="tag">
+        AGRICULTURA 5.0
+    </span>
+
+    <h1 class="hero-title">
+
+        AgroForte
+
+        <span>
+            Futuro Sustentável
+        </span>
+
     </h1>
 
     <p>
+
         Unindo tecnologia, inovação e preservação ambiental para transformar
         o agronegócio em um modelo moderno, eficiente e sustentável.
+
     </p>
 
     <div class="hero-buttons">
 
-        <a class="btn btn-primary"
+        <a
+        class="btn btn-primary"
         href="https://agropecfuturo.com.br/agro-forte-futuro-sustentavel-equilibrio/"
         target="_blank">
 
-        Saiba Mais
+            Saiba Mais
 
         </a>
 
-        <a class="btn btn-secondary" href="#projetos">
+        <a
+        class="btn btn-secondary"
+        href="#projetos">
+
             Ver Projetos
+
         </a>
 
     </div>
 
 </section>
 
-<section id="sobre" class="section">
+<section id="sobre" class="section reveal">
 
     <h2 class="section-title">
+
         Sobre o AgroForte
+
     </h2>
 
     <div class="about">
 
         <div class="about-text">
 
-            O AgroForte Futuro Sustentável é um projeto voltado para a modernização da agricultura através da tecnologia e da preservação ambiental. Seu principal objetivo é unir produtividade agrícola e sustentabilidade, promovendo soluções inteligentes para o campo. O sistema incentiva práticas como energia solar rural, irrigação inteligente, reaproveitamento de água e preservação do solo, reduzindo impactos ambientais e aumentando a eficiência das propriedades rurais.
+            <p>
 
-            <br><br>
+                O AgroForte Futuro Sustentável é um projeto voltado para a modernização da agricultura através da tecnologia e da preservação ambiental. Seu principal objetivo é unir produtividade agrícola e sustentabilidade, promovendo soluções inteligentes para o campo.
 
-         Além disso, o AgroForte utiliza tecnologias modernas, como drones, sensores agrícolas e automação digital, que ajudam no monitoramento das plantações e na redução de desperdícios. O projeto também valoriza os produtores rurais, oferecendo inovação, desenvolvimento e incentivo ao crescimento sustentável da agricultura. Dessa forma, o AgroForte busca construir um futuro mais verde, tecnológico e sustentável para as próximas gerações.
-            <br><br>
+            </p>
 
-            Acreditamos em um futuro onde produtividade e sustentabilidade
-            caminham juntas para criar uma agricultura mais eficiente,
-            ecológica e inovadora.
+            <br>
+
+            <p>
+
+                O sistema incentiva práticas como energia solar rural, irrigação inteligente, reaproveitamento de água e preservação do solo, reduzindo impactos ambientais e aumentando a eficiência das propriedades rurais.
+
+            </p>
+
+            <br>
+
+            <p>
+
+                Além disso, o AgroForte utiliza tecnologias modernas, como drones, sensores agrícolas e automação digital, que ajudam no monitoramento das plantações e na redução de desperdícios.
+
+            </p>
+
+            <br>
+
+            <p>
+
+                Dessa forma, o AgroForte busca construir um futuro mais verde, tecnológico e sustentável para as próximas gerações.
+
+            </p>
 
         </div>
 
         <div class="about-image">
 
-           <img
-                  src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1974&auto=format&fit=crop"
-                  alt="Plantação sustentável utilizando tecnologia agrícola moderna">
+            <img
+            class="img-main"
+            src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1974&auto=format&fit=crop"
+            alt="Plantação sustentável">
+
+            <img
+            class="img-float img1"
+            src="https://images.unsplash.com/photo-1592982537447-7440770cbfc9?q=80&w=1200&auto=format&fit=crop"
+            alt="Drone agrícola">
+
+            <img
+            class="img-float img2"
+            src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=1200&auto=format&fit=crop"
+            alt="Tecnologia agrícola">
 
         </div>
 
@@ -98,10 +152,12 @@
 
 </section>
 
-<section id="projetos" class="section">
+<section id="projetos" class="section reveal">
 
     <h2 class="section-title">
+
         Projetos Sustentáveis
+
     </h2>
 
     <div class="cards">
@@ -110,10 +166,14 @@
 
             <span>☀</span>
 
-            <h3>Energia Solar Rural</h3>
+            <h3>
+                Energia Solar Rural
+            </h3>
 
             <p>
-              A energia solar rural é uma solução sustentável que utiliza a luz do sol para gerar eletricidade nas propriedades agrícolas. Além de reduzir os custos com energia, ela contribui para a preservação do meio ambiente por ser uma fonte limpa e renovável. Com a energia solar, produtores rurais podem aumentar a eficiência no campo e tornar a agricultura mais moderna e sustentável.
+
+                A energia solar rural é uma solução sustentável que utiliza a luz do sol para gerar eletricidade nas propriedades agrícolas.
+
             </p>
 
         </div>
@@ -122,10 +182,13 @@
 
             <span>💧</span>
 
-            <h3>Irrigação Inteligente</h3>
+            <h3>
+                Irrigação Inteligente
+            </h3>
 
             <p>
-                A irrigação inteligente é uma tecnologia que utiliza sensores e sistemas automáticos para controlar a quantidade certa de água nas plantações. Esse método evita desperdícios, melhora a produtividade agrícola e contribui para uma agricultura mais sustentável. Além disso, ajuda os produtores a economizar recursos e manter o solo mais saudável.
+
+                A irrigação inteligente utiliza sensores e sistemas automáticos para controlar a quantidade certa de água nas plantações.
 
             </p>
 
@@ -135,10 +198,29 @@
 
             <span>🌿</span>
 
-            <h3>Plantio Sustentável</h3>
+            <h3>
+                Plantio Sustentável
+            </h3>
 
             <p>
-                O plantio sustentável é uma prática agrícola que busca produzir alimentos de forma eficiente sem prejudicar o meio ambiente. Ele utiliza técnicas que preservam o solo, economizam água e reduzem o uso de produtos químicos. Dessa forma, promove uma agricultura mais saudável, equilibrada e sustentável para as futuras gerações.
+
+                O plantio sustentável promove uma agricultura eficiente sem prejudicar o meio ambiente.
+
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <span>🚁</span>
+
+            <h3>
+                Drones Agrícolas
+            </h3>
+
+            <p>
+
+                Monitoramento inteligente das lavouras através de imagens aéreas e análise de dados.
 
             </p>
 
@@ -148,37 +230,94 @@
 
 </section>
 
+<section id="impacto" class="section reveal">
+
+    <h2 class="section-title">
+
+        Impacto Sustentável
+
+    </h2>
+
+    <div class="stats">
+
+        <div class="stat">
+
+            <h3>95%</h3>
+
+            <p>
+                Economia de Água
+            </p>
+
+        </div>
+
+        <div class="stat">
+
+            <h3>80%</h3>
+
+            <p>
+                Redução de Desperdícios
+            </p>
+
+        </div>
+
+        <div class="stat">
+
+            <h3>100%</h3>
+
+            <p>
+                Energia Renovável
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
 <footer>
-    <p>© 2026 AgroForte Futuro Sustentável</p>
+
+    <h3>
+        🌱 AgroForte
+    </h3>
+
+    <p>
+
+        Tecnologia, inovação e sustentabilidade para o futuro do agronegócio.
+
+    </p>
+
+    <p>
+
+        © 2026 AgroForte Futuro Sustentável
+
+    </p>
+
 </footer>
 
-<!-- Botão de acessibilidade -->
 <button
-    id="btn-acessibilidade"
-    class="btn-acessibilidade"
-    aria-label="Abrir painel de acessibilidade">
+id="btn-acessibilidade"
+class="btn-acessibilidade"
+aria-label="Abrir painel de acessibilidade">
 
-    ♿
+♿
 
 </button>
 
-<!-- Painel de acessibilidade -->
 <div
-    id="painel-acessibilidade"
-    class="acessibilidade"
-    aria-label="Painel de acessibilidade">
+id="painel-acessibilidade"
+class="acessibilidade">
 
-    <button id="aumentar-fonte">
-        🔠 A+
-    </button>
+<button id="aumentar-fonte">
+A+
+</button>
 
-    <button id="diminuir-fonte">
-        🔡 A-
-    </button>
+<button id="diminuir-fonte">
+A-
+</button>
 
-    <button id="alto-contraste">
-        🌓 Contraste
-    </button>
+<button id="alto-contraste">
+Contraste
+</button>
 
 </div>
 
@@ -186,3 +325,4 @@
 
 </body>
 </html>
+```
