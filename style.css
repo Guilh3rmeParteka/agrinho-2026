@@ -424,3 +424,138 @@ footer{
     }
 
 }
+/* ================================= */
+/* ACESSIBILIDADE */
+/* ================================= */
+
+.btn-acessibilidade{
+
+    position:fixed;
+
+    right:25px;
+    bottom:25px;
+
+    width:65px;
+    height:65px;
+
+    border:none;
+    border-radius:50%;
+
+    background:linear-gradient(
+        135deg,
+        #00ff99,
+        #00cfff
+    );
+
+    color:#000;
+
+    font-size:28px;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    box-shadow:
+    0 0 20px rgba(0,255,153,.6);
+
+    z-index:9999;
+
+    transition:.3s;
+}
+
+.btn-acessibilidade:hover{
+
+    transform:scale(1.1);
+
+}
+
+.acessibilidade{
+
+    position:fixed;
+
+    right:25px;
+    bottom:105px;
+
+    display:none;
+    flex-direction:column;
+
+    gap:10px;
+
+    padding:15px;
+
+    border-radius:15px;
+
+    backdrop-filter:blur(20px);
+
+    background:rgba(0,0,0,.8);
+
+    border:1px solid rgba(255,255,255,.2);
+
+    z-index:9999;
+}
+
+.acessibilidade.ativo{
+
+    display:flex;
+
+}
+
+.acessibilidade button{
+
+    padding:12px 18px;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    background:#00ff99;
+
+    color:#000;
+
+    transition:.3s;
+}
+
+.acessibilidade button:hover{
+
+    transform:translateY(-3px);
+
+}
+
+/* Modo contraste */
+
+.modo-contraste{
+
+    background:#000 !important;
+    color:#fff !important;
+
+}
+
+.modo-contraste header{
+
+    background:#000 !important;
+
+}
+
+.modo-contraste .card{
+
+    background:#111 !important;
+
+    border:2px solid #fff;
+
+}
+
+.modo-contraste a{
+
+    color:#fff !important;
+
+}
+
+.modo-contraste .btn-primary{
+
+    background:#fff !important;
+    color:#000 !important;
+
+}

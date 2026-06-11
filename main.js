@@ -1,51 +1,75 @@
-// main.js
+const botaoAcessibilidade =
+document.getElementById("btn-acessibilidade");
 
-document.addEventListener("DOMContentLoaded", () => {
-    inicializarAcessibilidade();
+const painelAcessibilidade =
+document.getElementById("painel-acessibilidade");
+
+const aumentarFonte =
+document.getElementById("aumentar-fonte");
+
+const diminuirFonte =
+document.getElementById("diminuir-fonte");
+
+const altoContraste =
+document.getElementById("alto-contraste");
+
+let tamanhoFonte = 100;
+
+/* Abrir painel */
+
+botaoAcessibilidade.addEventListener("click", () => {
+
+    painelAcessibilidade.classList.toggle("ativo");
+
 });
 
-function inicializarAcessibilidade() {
-    configurarNavegacaoPorTeclado();
-    configurarAtalhos();
-    console.log("Recursos de acessibilidade carregados.");
-}
+/* Aumentar fonte */
 
-function configurarNavegacaoPorTeclado() {
-    const elementosFocaveis = document.querySelectorAll(
-        'a, button, input, textarea, select, [tabindex]'
+aumentarFonte.addEventListener("click", () => {
+
+    tamanhoFonte += 10;
+
+    document.body.style.fontSize =
+    tamanhoFonte + "%";
+
+});
+
+/* Diminuir fonte */
+
+diminuirFonte.addEventListener("click", () => {
+
+    if(tamanhoFonte > 70){
+
+        tamanhoFonte -= 10;
+
+        document.body.style.fontSize =
+        tamanhoFonte + "%";
+
+    }
+
+});
+
+/* Alto contraste */
+
+altoContraste.addEventListener("click", () => {
+
+    document.body.classList.toggle(
+        "modo-contraste"
     );
 
-    elementosFocaveis.forEach((elemento) => {
-        elemento.addEventListener("focus", () => {
-            elemento.style.outline = "3px solid #005fcc";
-            elemento.style.outlineOffset = "2px";
-        });
+});
 
-        elemento.addEventListener("blur", () => {
-            elemento.style.outline = "";
-            elemento.style.outlineOffset = "";
-        });
-    });
-}
+/* Fechar painel clicando fora */
 
-function configurarAtalhos() {
-    document.addEventListener("keydown", (event) => {
-        // Alt + 1 → Ir para o conteúdo principal
-        if (event.altKey && event.key === "1") {
-            const conteudo = document.getElementById("conteudo-principal");
-            if (conteudo) {
-                conteudo.focus();
-                conteudo.scrollIntoView({ behavior: "smooth" });
-            }
-        }
+document.addEventListener("click", (e) => {
 
-        // Alt + 2 → Ir para o menu
-        if (event.altKey && event.key === "2") {
-            const menu = document.getElementById("menu-principal");
-            if (menu) {
-                menu.focus();
-                menu.scrollIntoView({ behavior: "smooth" });
-            }
-        }
-    });
-}
+    if(
+        !painelAcessibilidade.contains(e.target) &&
+        !botaoAcessibilidade.contains(e.target)
+    ){
+        painelAcessibilidade.classList.remove(
+            "ativo"
+        );
+    }
+
+});
